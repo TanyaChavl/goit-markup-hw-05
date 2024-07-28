@@ -468,38 +468,62 @@ body {
     margin-right: 24px;
 }
 
-.subscribe-wrapper {
-    display: inline-block;
+.subscribe-form-wrapper {
+    display: flex;
 }
 
-.subscribe-button-wrapper {
-    position: relative;
-    gap: 16px;
+.subscribe-form-label {
+    gap: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.subscribe-form-input {
+    width: 264px;
+    height: 40px;
+    border: 1px solid var(--white-color);
+    background-color: transparent;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    padding-left: 16px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    color: var(--white-color);
+}
+
+.subscribe-form-input::placeholder {
+    color: var(--white-color);
 }
 
 .subscribe-button {
     display: block;
-    background-color: var(--accent-color);
     min-width: 165px;
     height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: "Roboto", sans-serif;
-    font-weight: 500;
     font-size: 16px;
+    font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.04em;
     color: var(--white-color);
-    padding: 8px 24px;
     cursor: pointer;
+    background-color: var(--accent-color);
     border: none;
     border-radius: 4px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    text-align: left;
 }
 
 .subscribe-icon {
-    position: absolute;
-    top: 0;
-    right: 0;
+    margin-left: 16px;
+}
+
+.subscribe-button:hover,
+.subscribe-button:focus {
+    background-color: var(--cobalt-blue);
+    outline: none;
 }
 
 .modal-overlay {
@@ -513,11 +537,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    opacity: 0;
-    pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    /* opacity: 0; */
+    /* pointer-events: none;
     visibility: hidden;
-    transition-delay: 600ms;
+    transition-delay: 600ms; */
 }
 
 .modal-overlay.is-open {
@@ -528,13 +552,21 @@ body {
 }
 
 .modal {
+    position: absolute;
     background-color: var(--DAIRY);
     width: 408px;
-    height: 584px;
+    min-height: 584px;
     display: block;
     border-radius: 4px;
-    padding: 24px;
+    padding: 72px 24px 24px 24px;
     flex-direction: column;
+    top: 50%;
+    left: 50%;
+    box-shadow: 
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form {
@@ -542,9 +574,9 @@ body {
 }
 
 .modal-close-btn {
-    position: relative;
-    top: 0px;
-    right: 0px;
+    position: absolute;
+    top: 24px;
+    right: 24px;
     margin-left: auto;
     display: flex;
     align-items: center;
@@ -554,21 +586,20 @@ body {
     border: none;
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.10);
-    margin-bottom: 24px;
     width: 24px;
     height: 24px;
+    cursor: pointer;
 }
 
 .modal-close-btn:hover,
 .modal-close-btn:focus {
     background-color: var(--cobalt-blue);
     fill: var(--white-color);
-    outline: none;
-    cursor: pointer;
+    border: none;
 }
 
 .modal-close-icon {
-
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-caption {
@@ -608,12 +639,14 @@ body {
     border-radius: 4px;
     border: 1px solid var(--NAVY-BLUE-modal);
     padding: 8px 38px;
-    transition: 250ms ease-in-out;
+    background-color: transparent;
+    outline: transparent;
+    transition: transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: border-color;
 }
 
 .modal-form-input:focus {
-    border-color: 1px solid var(--accent-color);
+    border-color: var(--accent-color);
 }
 
 .modal-form-icon {
@@ -621,7 +654,7 @@ body {
     top: 50%;
     left: 16px;
     transform: translateY(-50%);
-    transition: 250ms ease-in-out;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: fill;
 }
 

@@ -433,20 +433,22 @@
                 <p class="footer-socials-text">
                     Subscribe
                 </p>
-                <div class="subscribe-wrapper">
-                    <input 
-                    type="email"
-                    class="modal-form-input"
-                    name="subscribe_email"
-                    id="subscribe_email" 
-                    />
-                    <div class="subscribe-button-wrapper">
-                        <button type="submit" class="subscribe-button">Subscribe</button>
-                        <svg class="subscribe-icon" width="24" height="24">
-                            <use href="./images/icons.svg#icon-send-white"></use>
-                        </svg>
-                    </div>
-                </div>
+                <form class="subscribe-form-wrapper">
+                    <label class="subscribe-form-label">
+                        <input 
+                            type="email" 
+                            class="subscribe-form-input"
+                            placeholder="E-mail" 
+                            name="subscribe_email" 
+                            id="subscribe_email" 
+                        />
+                        <button type="submit" class="subscribe-button">Subscribe
+                            <svg class="subscribe-icon" width="24" height="24">
+                                <use href="./images/icons.svg#icon-send-white"></use>
+                            </svg>
+                        </button>
+                    </label>
+                </form>
             </div>
         </div>
     </footer>
@@ -460,7 +462,7 @@
             <p class="modal-caption">Leave your contacts and we will call you back</p>
             <form class="modal-form" name="user_review">
                 <div class="modal-form-field">
-                    <label class="modal-form-label">
+                    <label class="modal-form-label" for="user_name">
                         Name
                     </label>
                     <div class="modal-form-wrapper">
@@ -476,7 +478,7 @@
                     </div>
                 </div>
                 <div class="modal-form-field">
-                    <label class="modal-form-label">
+                    <label class="modal-form-label" for="user_tel">
                         Phone
                     </label>
                     <div class="modal-form-wrapper">
@@ -492,7 +494,7 @@
                     </div>
                 </div>
                 <div class="modal-form-field">
-                    <label class="modal-form-label">
+                    <label class="modal-form-label" for="user_email">
                         Email
                     </label>
                     <div class="modal-form-wrapper">
@@ -508,7 +510,7 @@
                     </div>
                 </div>
                 <div class="modal-form-field">
-                    <label class="modal-form-label">
+                    <label class="modal-form-label" for="user_comment">
                         Comment
                     </label>
                         <textarea 
