@@ -736,25 +736,23 @@ body {
 }
 
 .modal-form-checkbox {
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--NAVY-BLUE-modal);
+    border-radius: 2px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 16px;
-    height: 16px;
+    fill: transparent;
     margin-right: 8px;
-    border: 1px solid var(--NAVY-BLUE-modal);
     transition-property: border-color, background-color, fill;
     cursor: pointer;
-    border-radius: 2px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    fill: transparent;
-    align-items: center;
-    justify-content: center;
 }
 
 input[type='checkbox']:checked+.modal-form-desc>.modal-form-checkbox {
-    border-color: none;
     background-color: var(--cobalt-blue);
+    border: none;
     fill: var(--background-color);
 }
 
