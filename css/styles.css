@@ -745,7 +745,6 @@ body {
     justify-content: center;
     fill: transparent;
     margin-right: 8px;
-    transition-property: border-color, background-color, fill;
     cursor: pointer;
 }
 
