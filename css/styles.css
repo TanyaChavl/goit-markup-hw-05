@@ -541,7 +541,6 @@ body {
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
-    transition-delay: 600ms;
 }
 
 .modal-overlay.is-open {
@@ -725,14 +724,11 @@ body {
 }
 
 .modal-form-desc {
-    display: inline-flex;
     color: var(--LIGHT-SLATE);
     font-size: 12px;
     font-weight: 400;
     line-height: 1.17;
     letter-spacing: 0.04em;
-    justify-content: center;
-    align-items: center;
 }
 
 .modal-form-checkbox {
@@ -740,8 +736,11 @@ body {
     height: 16px;
     border: 1px solid var(--NAVY-BLUE-modal);
     border-radius: 2px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: inline-flex;
+    transition: 
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     align-items: center;
     justify-content: center;
     fill: transparent;
