@@ -470,10 +470,10 @@ body {
 
 .subscribe-form-wrapper {
     display: flex;
+    gap: 24px;
 }
 
 .subscribe-form-label {
-    gap: 24px;
     display: flex;
     align-items: center;
 }
